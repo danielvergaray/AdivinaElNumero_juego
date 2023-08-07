@@ -1,2 +1,22 @@
 h1 {
-  color: blue; }
+  color: red; }
+
+.input-score-container {
+  display: grid;
+  grid-template-columns: 50% 50%; }
+  .input-score-container .input-btn {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto; }
+    .input-score-container .input-btn input {
+      width: 10rem;
+      height: 5rem; }
+    .input-score-container .input-btn button {
+      width: 8rem;
+      height: 3rem; }
+  .input-score-container .scores-pista {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column; }
