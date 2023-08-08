@@ -1,22 +1,55 @@
-h1 {
-  color: red; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.parte-superior {
+  padding: 50px; }
+  .parte-superior p {
+    text-align: right; }
+  .parte-superior h1 {
+    text-align: center;
+    color: red; }
+  .parte-superior div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    display: flex; }
+    .parte-superior div .signo-interrogacion {
+      margin: auto;
+      font-size: 60px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      cursor: pointer; }
 
 .input-score-container {
   display: grid;
-  grid-template-columns: 50% 50%; }
+  grid-template-columns: 50% 50%;
+  padding: 50px; }
   .input-score-container .input-btn {
     grid-column: 1;
     display: flex;
     flex-direction: column;
-    width: 50%;
     margin: auto; }
     .input-score-container .input-btn input {
       width: 10rem;
-      height: 5rem; }
-    .input-score-container .input-btn button {
-      width: 8rem;
-      height: 3rem; }
+      height: 5rem;
+      text-align: center;
+      font-size: 3rem; }
+    .input-score-container .input-btn div {
+      margin: 20px auto auto; }
+      .input-score-container .input-btn div button {
+        width: 8rem;
+        height: 3rem; }
   .input-score-container .scores-pista {
     grid-column: 2;
     display: flex;
     flex-direction: column; }
+    .input-score-container .scores-pista div {
+      margin-bottom: 20px; }
+    .input-score-container .scores-pista span {
+      line-height: 30px; }

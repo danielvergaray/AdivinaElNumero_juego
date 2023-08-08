@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <button>Repetir</button>
-    <p>Entre 1 y 20</p>
 
-    <h1>Bienvenido "Adivina mi numero"</h1>
+<body>
+    <section class="parte-superior">
+        <h1>Bienvenido "Adivina mi numero"</h1>
+        <button>Repetir</button>
+        <p>Entre 1 y 20</p>
+        <div>
+            <span class="signo-interrogacion" id="signoInterrogacion">?</span>
+        </div>
+
+    </section>
     <section>
         <span>?</span>
     </section>
-    <section class="input-score-container"> 
+    <section class="input-score-container">
         <div class="input-btn"> <!-- input y boton -->
-            <input type="number" name="" id="">
-            <button>Check</button>
+            <input type="number" name="" id="inputNumero" >
+            <div>
+                <button id="btn-check">Check</button>
+            </div>
+            
         </div>
         <div class="scores-pista"> <!-- Score, HighScore, pista -->
-            <span>Pista</span>
-            <span>🎉 score</span>
+            <div>
+                <span id="mensajeAlUsuario">Pista</span>
+            </div>
+            
+            <p>🎉 Score:<span id="score"></span></p>
             <span>🥇 HighScore</span>
         </div>
     </section>
 
-
+<script src="./js/codigo.js"></script>
 </body>
+
 </html>
