@@ -4,42 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <section class="parte-superior">
-        <h1>Bienvenido "Adivina mi numero"</h1>
-        <button>Repetir</button>
-        <p>Entre 1 y 20</p>
-        <div>
-            <span class="signo-interrogacion" id="signoInterrogacion">?</span>
-        </div>
+    <main id="fondoGanaste">
 
-    </section>
-    <section>
-        <span>?</span>
-    </section>
-    <section class="input-score-container">
-        <div class="input-btn"> <!-- input y boton -->
-            <input type="number" name="" id="inputNumero" >
+        <section class="parte-superior">
+            <h1>Bienvenido "Adivina mi numero"</h1>
             <div>
-                <button id="btn-check">Check</button>
+                <button id="repetirJuego">Repetir juego</button>
             </div>
-            
-        </div>
-        <div class="scores-pista"> <!-- Score, HighScore, pista -->
-            <div>
-                <span id="mensajeAlUsuario">Pista</span>
+            <p>Entre 1 y 20</p>
+            <div class="caja-numero-azar">
+                <span class="signo-interrogacion" id="signoInterrogacion">?</span>
             </div>
-            
-            <p>🎉 Score:<span id="score"></span></p>
-            <span>🥇 HighScore</span>
-        </div>
-    </section>
 
-<script src="./js/codigo.js"></script>
+        </section>
+        <section>
+            <span>?</span>
+        </section>
+        <section class="input-score-container">
+            <div class="input-btn"> <!-- input y boton -->
+                <input type="number" name="" id="inputNumero">
+                <div class="btn-check">
+                    <button id="btn-check">Check</button>
+                </div>
+
+            </div>
+            <div class="scores-pista"> <!-- Score, HighScore, pista -->
+                <div class="mensaje-usuario-container">
+                    <p>👉 PISTA:<span id="mensajeAlUsuario"></span></p>
+                </div>
+                <div class="scores-container">
+                    <p>🎉 SCORE:<span id="score"></span></p>
+                    <p>🥇 HIGHSCORE:<span id="highscore"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/codigo.js"></script>
 </body>
 
 </html>
