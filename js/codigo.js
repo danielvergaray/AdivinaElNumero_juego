@@ -1,7 +1,6 @@
 // Relacionado al numero secreto
 let numeroAzar = Math.trunc(Math.random() * 20) + 1;
 let signo = document.getElementById("signoInterrogacion");
-/* signo.innerText = numeroAzar; */
 
 // Score inicial
 let score = 20;
@@ -16,11 +15,8 @@ mensajeAlUsuario.innerText = "Comienza a adivinar";
 let btnCheck = document.getElementById("btn-check");
 btnCheck.addEventListener("click", verificar);
 
-
 function verificar() {
-
     document.getElementById("score").textContent = score;
-
     let numeroUsuario = Number(document.getElementById("inputNumero").value);
 
     if (playing && numeroUsuario) {
@@ -42,7 +38,6 @@ function verificar() {
 
                 playing = false;
 
-
             } else if (numeroUsuario !== numeroAzar) {
                 if (numeroUsuario < numeroAzar) {
                     let mensaje = ' 📉 Estas por debajo';
@@ -57,13 +52,10 @@ function verificar() {
                     document.getElementById("score").textContent = score;
                     alertaPorArriba();
                 }
-
-
             }
         } else {
             mensajeAlUsuario.innerText = "INGRESAR UN NUMERO ENTRE 1 Y 20";
         }
-
     }
     else if (playing && numeroUsuario === 0) {
         mensajeAlUsuario.innerText = "INGRESAR UN NUMERO ENTRE 1 Y 20";
@@ -75,11 +67,6 @@ function verificar() {
         hasPerdido();
         playing = false;
     }
-
-
-
-
-
 }
 
 let repetir = document.getElementById("repetirJuego");
@@ -93,11 +80,6 @@ repetir.addEventListener("click", function () {
     mensajeAlUsuario.innerText = "Comienza a adivinar";
     document.getElementById("score").textContent = score;
     playing = true
-
-    /* if(highscore<score){
-        highscore= score;
-    } */
-
 
 })
 
@@ -123,7 +105,6 @@ function alertaPorArriba() {
         }
     }).showToast();
 }
-
 function hasGanado() {
 
     Swal.fire({
